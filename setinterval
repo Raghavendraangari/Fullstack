@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+            .Start-button {
+                width:50px;
+                height:20px;
+            }
+            .Stop-button {
+                width:50px;
+                height:20px;
+            }
+        </style>
+        <script>
+            const temp=["orange","red","green","blue","yellow"];
+            let myinterval;
+            function starting(id)
+            {
+                console.log("ok")
+             
+                let i=0;
+                myinterval=setInterval(()=>{
+                    document.body.style.backgroundColor =` rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`;
+            },1000)
+            
+        }
+
+        function st(id1)
+            {
+                clearInterval(myinterval);
+                document.body.style.backgroundColor ="white"
+            }
+        </script>
+        
+    </head>
+    <body>
+        <button class="Start-button" onclick="starting('ele1')">Start</button>
+        <button class="Stop-button" onclick="st('a')">Stop</button>
+        
+    </body>
+    </html>
